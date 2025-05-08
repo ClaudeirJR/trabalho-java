@@ -1,0 +1,46 @@
+package analisegene;
+
+import java.util.Scanner;
+
+   public class analiseGene {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         
+        
+        System.out.print("Digite o numero de genes: ");
+        int N = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        
+        String[] genes = new String[N];
+        
+        
+        System.out.println("Digite os genes:");
+        for (int i = 0; i < N; i++) {
+            genes[i] = scanner.nextLine();
+        }
+        
+        
+        System.out.print("Digite o gene a ser analisado: ");
+        String analise = scanner.nextLine();
+        
+        
+        int contador = 0;
+        
+        
+        for (String gene : genes) {
+            if (gene.equals(analise)) {
+                contador++;
+            }
+        }
+        
+        
+        if (contador > 1) {
+            System.out.println("Achei o danado");
+        } else if (contador == 1) {
+            System.out.println("Ainda nao e o suficiente");
+        } else {
+            System.out.println("Sumiuu!");
+        }
+    }
+}
